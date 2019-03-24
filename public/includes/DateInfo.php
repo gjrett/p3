@@ -8,11 +8,11 @@ class DateInfo
      */
     private $request;
     public $hasErrors = false;
-    public $month;
-    public $day;
-    public $year;
-    public $minDay;
-    public $maxDay;
+    public $month = null;
+    public $day = null;
+    public $year= null;
+    public $minDay = null;
+    public $maxDay = null;
 
     /**
      * Form constructor

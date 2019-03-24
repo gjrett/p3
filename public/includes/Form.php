@@ -23,7 +23,7 @@ class Form
      */
     public function isSubmitted()
     {
-        return $_SERVER['REQUEST_METHOD'] == 'POST' || !empty($_GET);
+        return $_SERVER['REQUEST_METHOD'] == 'GET' || !empty($_GET);
     }
 
     /**

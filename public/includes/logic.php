@@ -13,6 +13,7 @@ $month = null;
 $dayMaxErr = null;
 $errMessage = null;
 $dayErr = false;
+$birthday = null;
 
 # Get `results` data from session, if available
 if (isset($_SESSION['results'])) {

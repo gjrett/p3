@@ -1,5 +1,5 @@
 <?php
-require 'C:\xampp\htdocs\p3\resources\views\birthday\process.php';
+require 'includes/process.php';
 ?>
 
 @extends('layouts.master')
@@ -9,11 +9,7 @@ require 'C:\xampp\htdocs\p3\resources\views\birthday\process.php';
 @endsection
 
 @section('content')
-<?php
-    if ($checked) {
-        $birthday = 'HAPPY BIRTHDAY!';
-    } 
-?>
+
  <div>
     <section id='main'>
         <form method='GET' action='process.php'>

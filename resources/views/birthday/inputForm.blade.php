@@ -1,5 +1,5 @@
 <?php
-require 'C:\xampp\htdocs\p3\resources\views\birthday\logic.php';
+require 'includes/logic.php';
 ?>
 
 @extends('layouts.master')

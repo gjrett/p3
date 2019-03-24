@@ -9,9 +9,9 @@
  */
 
 #require 'includes/helpers.php';
-require 'C:\xampp\htdocs\p3\resources\views\birthday\logic.php';
-require 'C:\xampp\htdocs\p3\resources\views\birthday\Form.php';
-require 'C:\xampp\htdocs\p3\resources\views\birthday\DateInfo.php';
+require 'logic.php';
+require 'Form.php';
+require 'DateInfo.php';
 
 use DWA\Form;
 use DWA\DateInfo;
@@ -137,6 +137,10 @@ if (!$form->hasErrors) {
     }
 
     #If input date is a birthday, set happy birthday value
+
+    if ($checked) {
+        $birthday = 'HAPPY BIRTHDAY!';
+    } 
 }
 # Store our results data in the SESSION so it's available when we redirect back to index.php
 $_SESSION['results'] = [
@@ -148,9 +152,9 @@ $_SESSION['results'] = [
     'dayMaxErr' => $dayMaxErr,
     'year' => $year,
     'checked' => $checked,
-    'weekDay' => $weekDay
-    #'birthday' => $birthday
+    'weekDay' => $weekDay,
+    'birthday' => $birthday
 ];
 
-# Redirect back to the form on index.php
-#header('Location: show.blade.php');
+# Redirect back to the form on show.blade.php
+header('Location: show.blade.php');
