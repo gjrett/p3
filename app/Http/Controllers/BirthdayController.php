@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App;
 
-class DateController extends Controller
+class BirthdayController extends Controller
 {
 
     /**
@@ -13,14 +13,15 @@ class DateController extends Controller
      */
     public function index()
     {
-        return 'Here is the form for the date input...';
+        return view('birthday.inputForm');
     }
 
     /**
      * GET /dateInfo/{date}
      */
-    public function show($date)
+    public function show()
     {
-        return 'Results for the date: ' . $date;
+        return view('birthday.show');
     }
+
 }

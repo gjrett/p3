@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'DateController@index');
-Route::get('/{date}', 'DateController@show');
+Route::get('/', 'BirthdayController@index');
+Route::get('/{birthday}', 'BirthdayController@show');
