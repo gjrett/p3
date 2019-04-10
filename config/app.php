@@ -2,6 +2,18 @@
 
 return [
 
+
+    'githubUrl' => 'https://github.com/gjrett/p3',
+
+    'nav' => [
+        // URL => Link label
+        'birthdays' => 'Birthdays',
+        'birthdays/create' => 'Add a Birthday',
+        'login' => 'Login',
+        'about' => 'About',
+        'contact' => 'Contact',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -13,7 +25,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => 'Birthdays',
 
     /*
     |--------------------------------------------------------------------------

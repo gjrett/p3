@@ -1,30 +1,36 @@
-<?php
-require 'includes/process.php';
-?>
-
 @extends('layouts.master')
 
+@section('title')
+    {{ $results['birthdayTitle'] }}
+@endsection
+
 @section('head')
-   <h1>'HAPPY BIRTHDAY'</h1>
+    {{-- Page specific CSS includes should be defined here; this .css file does not exist yet, but we can create it --}}
+    <link href='/css/books/show.css' rel='stylesheet'>
 @endsection
 
 @section('content')
 
- <div>
-    <section id='main'>
-        <form method='GET' action='process.php'>
-            <label>The week day for the input birth date is:<br>
-                <input type='text' readonly name='weekDay' size='11' value='<?= $weekDay ?? '' ?>'>
-            </label>
-            <label>
-                <input type='text'
-                       readonly
-                       name='birthday'
-                       size='17'
-                       style="border:none"
-                       value='<?= $birthday ?? '' ?>'>
-            </Label>
-        </form>
-    </section>
-</div>
+    <div align='center'>
+        <div class=</div>
+            <h1>Birthday Information</h1>
+            <section id='main'>
+                @if(count($results) == 0)
+                    Input Error! No Birthday Information Available.
+                @else
+                    <h4>Birthday Title: {{ $results['birthdayTitle'] }}</h4>
+                    <h4>Birthday date: {{ $results['birthDate'] }}</h4>
+                    <h4>Week day born on: {{ $results['weekDay'] }}</h4>
+                    <h4>Zodiac Sign: {{ $results['zodiacSign'] }}</h4>
+                    <h4>Chinese Sign: {{ $results['chineseSign'] }}</h4>
+                    <h4>Birthstone: <img src={{$results['birthstone']}} alt="Birthstone"></h4>
+                    <!--if check box is checked, show the fortune.-->
+                    @if ($results['checked'])
+                        <h4>Your fortune: "{{ $results['fortune'] }}"</h4>
+                    @endif
+                @endif
+            </section>
+        </div>
+
 @endsection
+

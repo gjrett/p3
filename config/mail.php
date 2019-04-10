@@ -135,5 +135,6 @@ return [
 
 # config support email
 
-    'supportEmail' => 'help@dates.dwa15.me',
+    # support email address
+    'supportEmail' => 'help@birthdays.dwa15gjr.me'
 ];

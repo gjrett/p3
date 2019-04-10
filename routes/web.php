@@ -11,5 +11,31 @@
 |
 */
 
-Route::get('/', 'BirthdayController@index');
-Route::get('/{birthday}', 'BirthdayController@show');
+
+/*
+ * Misc "static" pages
+ */
+Route::view('/', 'welcome');
+Route::view('/login', 'login');
+Route::view('/about', 'about');
+Route::view('/contact', 'contact');
+
+/*
+ * Birthday forms
+ */
+Route::get('/birthdays/create', 'BirthdayController@create');
+Route::post('/birthdays/process', 'BirthdayController@process');
+Route::get('/birthdays/show', 'BirthdayController@show');
+Route::get('/birthdays/store', 'BirthdayController@store');
+
+# Show the search form
+Route::get('/birthdays/search', 'BirthdayController@search');
+
+
+Route::get('/birthdays', 'BirthdayController@index');
+
+/**
+ * Practice
+ */
+Route::any('/practice/{n?}', 'PracticeController@index');
+
