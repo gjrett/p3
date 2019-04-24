@@ -29,8 +29,15 @@ Fortune Cookie Fortunes – JoshMadison.com
 ## Packages
 *List the name of any packages you add to your project that do not come with Laravel by default; this should include, but is not limited to, barryvdh/laravel-debugbar*
 
+barryvdh/laravel-debugbar
+
 ## Code style divergences
 *list any divergences from PSR-1/PSR-2 and course guidelines on code style*
 
 ## Notes for instructor
 *Any notes for me to refer to while grading; if none, omit this section*
+I did have trouble trying to instal two different horoscope packages and thought I cleared
+the problems when I pulled the last version down from github.  After making many changes I tried
+to push the project back to github, but my comments didn't show up, so it appears it didn't save.
+I ended up changing the folder name and set up a new repository, then copied the changed files to
+the new project folder and pushed it back to github. Seems to ahve worked.
